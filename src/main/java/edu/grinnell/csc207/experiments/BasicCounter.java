@@ -49,4 +49,5 @@ public class BasicCounter implements Counter {
   public int get(){
     return this.count;
   }
+
 }
