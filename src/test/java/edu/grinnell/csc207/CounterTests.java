@@ -29,7 +29,8 @@ public class CounterTests {
     Counter alpha = new NamedCounter("alfa", 0);
 
     Counter beta = new BasicCounter(123);
-    DecrementableCounter gamma = new BasicCounter(-5);
+    DecrementableCounter gamma = new DecrementableCounter(-5);
+    
     assertEquals(0, alpha.get(), "original alpha");
     assertEquals(123, beta.get(), "original beta");
     assertEquals(-5, gamma.get(), "original gamma");
