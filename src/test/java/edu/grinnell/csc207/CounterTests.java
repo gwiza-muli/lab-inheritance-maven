@@ -2,6 +2,7 @@ package edu.grinnell.csc207;
 
 import edu.grinnell.csc207.experiments.BasicCounter;
 import edu.grinnell.csc207.experiments.DecrementableCounter;
+import edu.grinnell.csc207.experiments.DoubleCounter;
 import edu.grinnell.csc207.experiments.NamedCounter;
 import edu.grinnell.csc207.experiments.Tally;
 import edu.grinnell.csc207.experiments.DecrementableCounter;
@@ -28,7 +29,7 @@ public class CounterTests {
   public void test1() throws Exception {
     Counter alpha = new NamedCounter("alfa", 0);
 
-    Counter beta = new BasicCounter(123);
+    Counter beta = new DoubleCounter(123);
     DecrementableCounter gamma = new DecrementableCounter(-5);
     
     assertEquals(0, alpha.get(), "original alpha");
