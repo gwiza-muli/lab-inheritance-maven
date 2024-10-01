@@ -14,8 +14,7 @@ public class CounterExperiments {
   /**
    * Run our experiments.
    *
-   * @param args
-   *   The command-line arguments. Ignored.
+   * @param args The command-line arguments. Ignored.
    */
   public static void main(String[] args) throws Exception {
 
@@ -24,10 +23,9 @@ public class CounterExperiments {
     PrintWriter pen = new PrintWriter(System.out, true);
 
     // Set up some counters
-    Counter alpha = new Tally();
+    Counter alpha = new NamedCounter("alfa", 0);
     Counter beta = new BasicCounter(123);
-    Counter gamma = new DecrementableCounter(-5);
-
+    DecrementableCounter gamma = new BasicCounter(-5);
     // Print original values
     pen.println("Original alpha = " + alpha);
     pen.println("Original beta = " + beta);
@@ -43,8 +41,8 @@ public class CounterExperiments {
 
     // And we're done
     pen.close();
-    
 
-   
+
+
   } // main(String[])
 } // class CounterExperiments
